@@ -39,6 +39,7 @@ def export_to_xlsx_csv_tab(ex_dataframe, ex_filename):
     ex_dataframe.to_excel(ex_filename+'.xlsx', sheet_name='Sheet1')
     ex_dataframe.to_csv(ex_filename+'.csv', sep=',', quoting=csv.QUOTE_ALL, na_rep='{na}',index=False, encoding='utf-8')
     ex_dataframe.to_csv(ex_filename+'.tab', sep='\t', quoting=csv.QUOTE_NONE, na_rep='{na}',index=False, encoding='utf-8')
+    ex_dataframe.to_csv(ex_filename+'.tsv', sep='\t', quoting=csv.QUOTE_NONE, na_rep='{na}',index=False, encoding='utf-8')
 
 
 def fetch_and_write(options):
