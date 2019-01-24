@@ -58,7 +58,7 @@ def fetch_and_write(options):
                                        })
 
     lcode.remove('en')
-    for l in lcode[0:2]:
+    for l in lcode: # all or some [0:2] 
         ccode, cname, lcode, lname=retrieve_from_page(accept_lang='xx;q=0.8'.replace('xx',l))
         df_country_google_adding  = pd.DataFrame({  'geocode' : pd.Series(ccode),
                                             'geoname_xx'.replace('xx',l).replace('-','_') : pd.Series(cname)
